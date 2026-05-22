@@ -1,130 +1,1326 @@
-<!-- =========================
-FILE: plans.html
-========================= -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
 
-<title>Plans</title>
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="style.css">
+  <title>SteveHost Plans</title>
+
+  <link rel="stylesheet" href="plans.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 </head>
-
 <body>
 
-<div class="overlay"></div>
 
-<header>
 
-<div class="logo">
 
-<img src="logo.png">
 
-<div>
+  <!-- BACKGROUND -->
 
-<h1>STEVEHOST</h1>
+  <div class="overlay"></div>
 
-<p>PREMIUM HOSTING</p>
+  <div class="blur blur1"></div>
+
+  <div class="blur blur2"></div>
+
+
+
+
+
+
+
+  <!-- NAVBAR -->
+
+  <header>
+
+    <div class="navbar">
+
+
+
+      <!-- LOGO -->
+
+      <a href="index.html" class="logo-box">
+
+        <img src="logo.png" class="logo">
+
+        <div>
+
+          <h1>STEVEHOST</h1>
+
+          <p>PREMIUM HOSTING</p>
+
+        </div>
+
+      </a>
+
+
+
+
+
+      <!-- NAVIGATION -->
+
+      <div class="nav-links">
+
+        <button class="nav-btn active-nav"
+        onclick="showCategory('minecraft',this)">
+        MINECRAFT
+        </button>
+
+        <button class="nav-btn"
+        onclick="showCategory('bot',this)">
+        BOT
+        </button>
+
+        <button class="nav-btn"
+        onclick="showCategory('web',this)">
+        WEB
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+
+
+
+
+
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <span class="hero-top">
+
+        ⚡ INDIA LOW PING HOSTING
+
+      </span>
+
+
+
+
+
+      <h2>
+
+        PREMIUM <span>MINECRAFT</span><br>
+
+        HOSTING
+
+      </h2>
+
+
+
+
+
+      <p>
+
+        High performance Minecraft hosting powered
+        by Intel Xeon & AMD Ryzen CPUs with
+        ultra fast NVMe SSD storage.
+
+      </p>
+
+
+
+
+
+
+      <!-- BUTTONS -->
+
+      <div class="hero-buttons">
+
+        <button class="hero-btn green-btn"
+        onclick="scrollToPlans()">
+        VIEW PLANS
+        </button>
+
+        <a href="billing.html"
+        class="hero-btn dark-btn">
+        GET STARTED
+        </a>
+
+      </div>
+
+
+
+
+
+
+      <!-- STATS -->
+
+      <div class="hero-stats">
+
+        <div class="stat-box">
+
+          <h3>99.9%</h3>
+
+          <span>UPTIME</span>
+
+        </div>
+
+        <div class="stat-box">
+
+          <h3>24/7</h3>
+
+          <span>SUPPORT</span>
+
+        </div>
+
+        <div class="stat-box">
+
+          <h3>1Gbps</h3>
+
+          <span>NETWORK</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+  <!-- MAIN SECTION -->
+
+  <section id="minecraft-section"
+  class="main-section">
+
+
+
+
+
+    <!-- TITLE -->
+
+    <div class="section-title">
+
+      <span>HOSTING PLANS</span>
+
+      <h2>
+
+        MINECRAFT SERVER PLANS
+
+      </h2>
+
+    </div>
+
+
+
+
+
+
+
+    <!-- CPU SWITCH -->
+
+    <div class="cpu-switch">
+
+      <button class="cpu-btn active-cpu"
+      onclick="showCPU('intel',this)">
+      Intel Xeon
+      </button>
+
+      <button class="cpu-btn"
+      onclick="showCPU('ryzen',this)">
+      AMD Ryzen
+      </button>
+
+    </div>
+
+
+
+
+
+
+
+
+    <!-- INTEL -->
+
+    <div id="intel"
+    class="plans-grid">
+
+
+
+      <!-- CARD -->
+
+      <div class="card">
+
+        <div class="plan-top">
+
+          <div class="badge green">
+            DIRT
+          </div>
+
+          <span class="ram">
+            2GB RAM
+          </span>
+
+        </div>
+
+
+
+
+
+        <h3>DIRT PLAN</h3>
+
+
+
+
+
+        <div class="price">
+
+          ₹89
+
+          <span>/month</span>
+
+        </div>
+
+
+
+
+
+        <ul>
+
+          <li>1 vCore CPU</li>
+
+          <li>15GB NVMe SSD</li>
+
+          <li>Intel Xeon CPU</li>
+
+          <li>DDoS Protection</li>
+
+          <li>FTP Access</li>
+
+          <li>India Location</li>
+
+        </ul>
+
+
+
+
+
+        <a href="billing.html"
+        class="buy-btn">
+        BUY NOW
+        </a>
+
+      </div>
+
+
+
+
+
+
+
+
+
+      <div class="card">
+
+        <div class="plan-top">
+
+          <div class="badge blue">
+            STONE
+          </div>
+
+          <span class="ram">
+            4GB RAM
+          </span>
+
+        </div>
+
+
+
+
+
+        <h3>STONE PLAN</h3>
+
+
+
+
+
+        <div class="price">
+
+          ₹169
+
+          <span>/month</span>
+
+        </div>
+
+
+
+
+
+        <ul>
+
+          <li>2 vCore CPU</li>
+
+          <li>30GB NVMe SSD</li>
+
+          <li>Plugin Support</li>
+
+          <li>India Location</li>
+
+          <li>1Gbps Network</li>
+
+          <li>DDoS Protection</li>
+
+        </ul>
+
+
+
+
+
+        <a href="billing.html"
+        class="buy-btn">
+        BUY NOW
+        </a>
+
+      </div>
+
+
+
+
+
+
+
+
+
+      <div class="card featured-card">
+
+        <div class="featured-tag">
+
+          POPULAR
+
+        </div>
+
+
+
+
+
+        <div class="plan-top">
+
+          <div class="badge purple">
+            IRON
+          </div>
+
+          <span class="ram">
+            6GB RAM
+          </span>
+
+        </div>
+
+
+
+
+
+        <h3>IRON PLAN</h3>
+
+
+
+
+
+        <div class="price">
+
+          ₹249
+
+          <span>/month</span>
+
+        </div>
+
+
+
+
+
+        <ul>
+
+          <li>3 vCore CPU</li>
+
+          <li>45GB NVMe SSD</li>
+
+          <li>Unlimited Plugins</li>
+
+          <li>Daily Backup</li>
+
+          <li>Low Ping India</li>
+
+          <li>Priority Support</li>
+
+        </ul>
+
+
+
+
+
+        <a href="billing.html"
+        class="buy-btn">
+        BUY NOW
+        </a>
+
+      </div>
+
+
+
+
+
+
+
+
+
+      <div class="card">
+
+        <div class="plan-top">
+
+          <div class="badge gold">
+            GOLD
+          </div>
+
+          <span class="ram">
+            8GB RAM
+          </span>
+
+        </div>
+
+
+
+
+
+        <h3>GOLD PLAN</h3>
+
+
+
+
+
+        <div class="price">
+
+          ₹319
+
+          <span>/month</span>
+
+        </div>
+
+
+
+
+
+        <ul>
+
+          <li>4 vCore CPU</li>
+
+          <li>70GB NVMe SSD</li>
+
+          <li>Advanced DDoS</li>
+
+          <li>Priority Node</li>
+
+          <li>Modpack Support</li>
+
+          <li>Extreme Speed</li>
+
+        </ul>
+
+
+
+
+
+        <a href="billing.html"
+        class="buy-btn">
+        BUY NOW
+        </a>
+
+      </div>
+
+
+
+
+
+
+
+
+
+      <div class="card">
+
+        <div class="plan-top">
+
+          <div class="badge cyan">
+            DIAMOND
+          </div>
+
+          <span class="ram">
+            12GB RAM
+          </span>
+
+        </div>
+
+
+
+
+
+        <h3>DIAMOND PLAN</h3>
+
+
+
+
+
+        <div class="price">
+
+          ₹449
+
+          <span>/month</span>
+
+        </div>
+
+
+
+
+
+        <ul>
+
+          <li>6 vCore CPU</li>
+
+          <li>120GB NVMe SSD</li>
+
+          <li>Unlimited Slots</li>
+
+          <li>Premium Support</li>
+
+          <li>Extreme Speed</li>
+
+          <li>Dedicated Resources</li>
+
+        </ul>
+
+
+
+
+
+        <a href="billing.html"
+        class="buy-btn">
+        BUY NOW
+        </a>
+
+      </div>
+
+
+
+
+
+
+
+
+
+      <div class="card">
+
+        <div class="plan-top">
+
+          <div class="badge red">
+            NETHERITE
+          </div>
+
+          <span class="ram">
+            16GB RAM
+          </span>
+
+        </div>
+
+
+
+
+
+        <h3>NETHERITE PLAN</h3>
+
+
+
+
+
+        <div class="price">
+
+          ₹689
+
+          <span>/month</span>
+
+        </div>
+
+
+
+
+
+        <ul>
+
+          <li>8 vCore CPU</li>
+
+          <li>180GB NVMe SSD</li>
+
+          <li>Dedicated Performance</li>
+
+          <li>Highest Priority</li>
+
+          <li>Ultra Fast Network</li>
+
+          <li>Extreme Stability</li>
+
+        </ul>
+
+
+
+
+
+        <a href="billing.html"
+        class="buy-btn">
+        BUY NOW
+        </a>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+<!-- ================= AMD RYZEN PREMIUM HOSTING ================= -->
+
+<div id="ryzen"
+class="plans-grid"
+style="display:none;">
+
+
+
+  <!-- COAL -->
+
+  <div class="card">
+
+    <div class="premium-bar">
+      ⚡ PREMIUM HOSTING ⚡
+    </div>
+
+    <div class="plan-top">
+
+      <div class="badge gray">
+        ⛏ COAL
+      </div>
+
+      <span class="ram">
+        2GB RAM
+      </span>
+
+    </div>
+
+    <h3>COAL PLAN</h3>
+
+    <div class="specs">
+
+      2GB RAM • 2 Core
+
+    </div>
+
+    <div class="price">
+
+      ₹379
+
+      <span>/Month</span>
+
+    </div>
+
+    <ul>
+
+      <li>AMD Ryzen 9 CPU</li>
+
+      <li>20GB NVMe SSD</li>
+
+      <li>DDoS Protection</li>
+
+      <li>Ultra Low Latency</li>
+
+      <li>1Gbps Network</li>
+
+      <li>India Location</li>
+
+    </ul>
+
+    <div class="plan-features">
+
+      ⚡ Best Value Hosting <br>
+      🛡 Premium DDoS Protection <br>
+      🖥 Powered By AMD Ryzen 9 <br>
+      🚀 Ultra Low Latency Network
+
+    </div>
+
+    <a href="billing.html"
+    class="buy-btn">
+    BUY NOW
+    </a>
+
+  </div>
+
+
+
+
+
+
+
+
+
+  <!-- IRON -->
+
+  <div class="card">
+
+    <div class="premium-bar">
+      ⚡ PREMIUM HOSTING ⚡
+    </div>
+
+    <div class="plan-top">
+
+      <div class="badge purple">
+        ⛓ IRON
+      </div>
+
+      <span class="ram">
+        4GB RAM
+      </span>
+
+    </div>
+
+    <h3>IRON PLAN</h3>
+
+    <div class="specs">
+
+      4GB RAM • 2 Core
+
+    </div>
+
+    <div class="price">
+
+      ₹699
+
+      <span>/Month</span>
+
+    </div>
+
+    <ul>
+
+      <li>AMD Ryzen 9 CPU</li>
+
+      <li>40GB NVMe SSD</li>
+
+      <li>Premium DDoS</li>
+
+      <li>Low Ping India</li>
+
+      <li>Unlimited Plugins</li>
+
+      <li>Extreme Stability</li>
+
+    </ul>
+
+    <div class="plan-features">
+
+      ⚡ Best Value Hosting <br>
+      🛡 Premium DDoS Protection <br>
+      🖥 Powered By AMD Ryzen 9 <br>
+      🚀 Ultra Low Latency Network
+
+    </div>
+
+    <a href="billing.html"
+    class="buy-btn">
+    BUY NOW
+    </a>
+
+  </div>
+
+
+
+
+
+
+
+
+
+  <!-- GOLD -->
+
+  <div class="card featured-card">
+
+    <div class="featured-tag">
+
+      MOST POPULAR
+
+    </div>
+
+    <div class="premium-bar">
+      ⚡ PREMIUM HOSTING ⚡
+    </div>
+
+    <div class="plan-top">
+
+      <div class="badge gold">
+        🏆 GOLD
+      </div>
+
+      <span class="ram">
+        6GB RAM
+      </span>
+
+    </div>
+
+    <h3>GOLD PLAN</h3>
+
+    <div class="specs">
+
+      6GB RAM • 3 Core
+
+    </div>
+
+    <div class="price">
+
+      ₹1099
+
+      <span>/Month</span>
+
+    </div>
+
+    <ul>
+
+      <li>AMD Ryzen 9 CPU</li>
+
+      <li>60GB NVMe SSD</li>
+
+      <li>Public Server Ready</li>
+
+      <li>Advanced Security</li>
+
+      <li>Unlimited Plugins</li>
+
+      <li>Extreme Speed</li>
+
+    </ul>
+
+    <div class="plan-features">
+
+      ⚡ Best Value Hosting <br>
+      🛡 Premium DDoS Protection <br>
+      🖥 Powered By AMD Ryzen 9 <br>
+      🚀 Ultra Low Latency Network
+
+    </div>
+
+    <a href="billing.html"
+    class="buy-btn">
+    BUY NOW
+    </a>
+
+  </div>
+
+
+
+
+
+
+
+
+
+  <!-- DIAMOND -->
+
+  <div class="card">
+
+    <div class="premium-bar">
+      ⚡ PREMIUM HOSTING ⚡
+    </div>
+
+    <div class="plan-top">
+
+      <div class="badge cyan">
+        💎 DIAMOND
+      </div>
+
+      <span class="ram">
+        8GB RAM
+      </span>
+
+    </div>
+
+    <h3>DIAMOND PLAN</h3>
+
+    <div class="specs">
+
+      8GB RAM • 4 Core
+
+    </div>
+
+    <div class="price">
+
+      ₹1499
+
+      <span>/Month</span>
+
+    </div>
+
+    <ul>
+
+      <li>AMD Ryzen 9 CPU</li>
+
+      <li>90GB NVMe SSD</li>
+
+      <li>Dedicated Node</li>
+
+      <li>Premium Support</li>
+
+      <li>Extreme Stability</li>
+
+      <li>Unlimited Plugins</li>
+
+    </ul>
+
+    <div class="plan-features">
+
+      ⚡ Best Value Hosting <br>
+      🛡 Premium DDoS Protection <br>
+      🖥 Powered By AMD Ryzen 9 <br>
+      🚀 Ultra Low Latency Network
+
+    </div>
+
+    <a href="billing.html"
+    class="buy-btn">
+    BUY NOW
+    </a>
+
+  </div>
+
+
+
+
+
+
+
+
+
+  <!-- NETHERITE -->
+
+  <div class="card">
+
+    <div class="premium-bar">
+      ⚡ PREMIUM HOSTING ⚡
+    </div>
+
+    <div class="plan-top">
+
+      <div class="badge red">
+        🔥 NETHERITE
+      </div>
+
+      <span class="ram">
+        12GB RAM
+      </span>
+
+    </div>
+
+    <h3>NETHERITE PLAN</h3>
+
+    <div class="specs">
+
+      12GB RAM • 6 Core
+
+    </div>
+
+    <div class="price">
+
+      ₹2199
+
+      <span>/Month</span>
+
+    </div>
+
+    <ul>
+
+      <li>AMD Ryzen 9 CPU</li>
+
+      <li>140GB NVMe SSD</li>
+
+      <li>Highest Priority</li>
+
+      <li>Unlimited Slots</li>
+
+      <li>Extreme Performance</li>
+
+      <li>Low Ping India</li>
+
+    </ul>
+
+    <div class="plan-features">
+
+      ⚡ Best Value Hosting <br>
+      🛡 Premium DDoS Protection <br>
+      🖥 Powered By AMD Ryzen 9 <br>
+      🚀 Ultra Low Latency Network
+
+    </div>
+
+    <a href="billing.html"
+    class="buy-btn">
+    BUY NOW
+    </a>
+
+  </div>
+
+
+
+
+
+
+
+
+
+  <!-- DRAGON -->
+
+  <div class="card">
+
+    <div class="premium-bar">
+      ⚡ PREMIUM HOSTING ⚡
+    </div>
+
+    <div class="plan-top">
+
+      <div class="badge dragon">
+        🐉 DRAGON
+      </div>
+
+      <span class="ram">
+        16GB RAM
+      </span>
+
+    </div>
+
+    <h3>DRAGON PLAN</h3>
+
+    <div class="specs">
+
+      16GB RAM • 8 Core
+
+    </div>
+
+    <div class="price">
+
+      ₹2999
+
+      <span>/Month</span>
+
+    </div>
+
+    <ul>
+
+      <li>AMD Ryzen 9 CPU</li>
+
+      <li>200GB NVMe SSD</li>
+
+      <li>Dedicated Ryzen Node</li>
+
+      <li>Top Performance</li>
+
+      <li>Unlimited Power</li>
+
+      <li>Premium Hardware</li>
+
+    </ul>
+
+    <div class="plan-features">
+
+      ⚡ Best Value Hosting <br>
+      🛡 Premium DDoS Protection <br>
+      🖥 Powered By AMD Ryzen 9 <br>
+      🚀 Ultra Low Latency Network
+
+    </div>
+
+    <a href="billing.html"
+    class="buy-btn">
+    BUY NOW
+    </a>
+
+  </div>
 
 </div>
 
-</div>
 
-<nav>
 
-<a href="index.html">HOME</a>
-<a href="plans.html" class="active">PLANS</a>
-<a href="https://discord.gg/aba6rxp5ye" target="_blank">DISCORD</a>
 
-</nav>
+        <a href="billing.html"
+        class="buy-btn">
+        BUY NOW
+        </a>
 
-</header>
+      </div>
 
-<section class="plans-page">
+    </div>
 
-<div class="plans-title fade">
+  </section>
 
-<h2>⚡ PREMIUM HOSTING ⚡</h2>
 
-<h1>🚀 NEXT GEN MC SERVERS 🚀</h1>
 
-</div>
 
-<div class="plans-grid">
 
-<div class="plan">
-<h3>⛏ COAL PLAN</h3>
-<p>2GB RAM • 2 Core</p>
-<h4>₹349 / Month</h4>
-<a href="purchase.html">PURCHASE</a>
-</div>
 
-<div class="plan">
-<h3>⛓ IRON PLAN</h3>
-<p>4GB RAM • 2 Core</p>
-<h4>₹599 / Month</h4>
-<a href="purchase.html">PURCHASE</a>
-</div>
 
-<div class="plan popular">
-<h3>🏆 GOLD PLAN</h3>
-<p>6GB RAM • 3 Core</p>
-<h4>₹849 / Month</h4>
-<a href="purchase.html">PURCHASE</a>
-</div>
 
-<div class="plan">
-<h3>💎 DIAMOND PLAN</h3>
-<p>8GB RAM • 4 Core</p>
-<h4>₹1299 / Month</h4>
-<a href="purchase.html">PURCHASE</a>
-</div>
 
-<div class="plan">
-<h3>🟢 EMERALD PLAN</h3>
-<p>10GB RAM • 5 Core</p>
-<h4>₹1699 / Month</h4>
-<a href="purchase.html">PURCHASE</a>
-</div>
 
-<div class="plan">
-<h3>🔥 NETHERITE PLAN</h3>
-<p>12GB RAM • 6 Core</p>
-<h4>₹2099 / Month</h4>
-<a href="purchase.html">PURCHASE</a>
-</div>
+  <!-- BOT -->
 
-<div class="plan dragon">
-<h3>🐉 DRAGON PLAN</h3>
-<p>16GB RAM • 8 Core</p>
-<h4>₹2799 / Month</h4>
-<a href="purchase.html">PURCHASE</a>
-</div>
+  <section id="bot-section"
+  class="coming-section"
+  style="display:none;">
 
-</div>
+    <div class="coming-card">
 
-<div class="bottom-features">
+      <h2>BOT HOSTING</h2>
 
-<div class="feature-box">
-⚡ Best Value For Public Servers
-</div>
+      <p>Plans Not Available</p>
 
-<div class="feature-box">
-🛡 Premium DDoS Protection
-</div>
+    </div>
 
-<div class="feature-box">
-🖥 Powered By AMD Ryzen 9
-</div>
+  </section>
 
-</div>
 
-</section>
+
+
+
+
+
+
+
+
+  <!-- WEB -->
+
+  <section id="web-section"
+  class="coming-section"
+  style="display:none;">
+
+    <div class="coming-card">
+
+      <h2>WEB HOSTING</h2>
+
+      <p>Plans Not Available</p>
+
+    </div>
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+  <script>
+
+    function showCPU(type,btn){
+
+      document.getElementById("intel").style.display="none";
+
+      document.getElementById("ryzen").style.display="none";
+
+      document.getElementById(type).style.display="grid";
+
+      let buttons=document.querySelectorAll(".cpu-btn");
+
+      buttons.forEach(button=>{
+
+        button.classList.remove("active-cpu");
+
+      });
+
+      btn.classList.add("active-cpu");
+
+    }
+
+
+
+
+
+
+
+
+    function showCategory(type,btn){
+
+      document.getElementById("minecraft-section").style.display="block";
+
+      document.getElementById("bot-section").style.display="none";
+
+      document.getElementById("web-section").style.display="none";
+
+      if(type==="bot"){
+
+        document.getElementById("minecraft-section").style.display="none";
+
+        document.getElementById("bot-section").style.display="flex";
+
+      }
+
+      if(type==="web"){
+
+        document.getElementById("minecraft-section").style.display="none";
+
+        document.getElementById("web-section").style.display="flex";
+
+      }
+
+      let nav=document.querySelectorAll(".nav-btn");
+
+      nav.forEach(button=>{
+
+        button.classList.remove("active-nav");
+
+      });
+
+      btn.classList.add("active-nav");
+
+    }
+
+
+
+
+
+
+
+
+    function scrollToPlans(){
+
+      window.scrollTo({
+
+        top:720,
+
+        behavior:"smooth"
+
+      });
+
+    }
+
+  </script>
 
 </body>
 </html>

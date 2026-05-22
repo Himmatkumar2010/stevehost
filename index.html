@@ -1,7 +1,3 @@
-<!-- =========================
-FILE: index.html
-========================= -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +10,98 @@ FILE: index.html
 <link rel="stylesheet" href="style.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+/* PROFILE */
+
+#userArea{
+display:flex;
+align-items:center;
+}
+
+.profile-box{
+position:relative;
+display:none;
+}
+
+.profile-btn{
+
+width:48px;
+height:48px;
+
+border-radius:50%;
+overflow:hidden;
+
+cursor:pointer;
+
+border:2px solid rgba(255,255,255,0.2);
+
+}
+
+.profile-btn img{
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+}
+
+.profile-dropdown{
+
+position:absolute;
+
+top:60px;
+right:0;
+
+width:220px;
+
+background:#101828;
+
+border-radius:18px;
+
+overflow:hidden;
+
+display:none;
+
+border:1px solid rgba(255,255,255,0.08);
+
+backdrop-filter:blur(15px);
+
+z-index:1000;
+
+}
+
+.profile-box:hover .profile-dropdown{
+display:block;
+}
+
+.profile-dropdown a{
+
+display:flex;
+align-items:center;
+gap:12px;
+
+padding:16px;
+
+color:white;
+
+text-decoration:none;
+
+transition:0.3s;
+
+font-size:14px;
+
+}
+
+.profile-dropdown a:hover{
+background:rgba(255,255,255,0.08);
+}
+
+</style>
 
 </head>
 
@@ -40,8 +128,56 @@ FILE: index.html
 <nav>
 
 <a href="index.html" class="active">HOME</a>
+
 <a href="plans.html">PLANS</a>
-<a href="https://discord.gg/aba6rxp5ye" target="_blank">DISCORD</a>
+
+<a href="https://discord.gg/aba6rxp5ye" target="_blank">
+DISCORD
+</a>
+
+<a href="dashboard.html" class="icon-btn">
+<i class="fa-solid fa-server"></i>
+</a>
+
+<!-- USER AREA -->
+
+<div id="userArea">
+
+<a href="login.html" class="icon-btn" id="loginIcon">
+<i class="fa-solid fa-user"></i>
+</a>
+
+<div class="profile-box" id="profileBox">
+
+<div class="profile-btn">
+
+<img id="profileImage"
+src="https://i.imgur.com/6VBx3io.png">
+
+</div>
+
+<div class="profile-dropdown">
+
+<a href="profile.html">
+<i class="fa-solid fa-user"></i>
+Profile
+</a>
+
+<a href="reset-password.html">
+<i class="fa-solid fa-lock"></i>
+Reset Password
+</a>
+
+<a href="#" id="logoutBtn">
+<i class="fa-solid fa-right-from-bracket"></i>
+Logout
+</a>
+
+</div>
+
+</div>
+
+</div>
 
 </nav>
 
@@ -69,13 +205,151 @@ DDoS protection and premium performance.
 GET PLANS
 </a>
 
-<a href="https://discord.gg/aba6rxp5ye" target="_blank" class="discord-btn">
+<a href="dashboard.html" class="panel-btn">
+OPEN PANEL
+</a>
+
+<a href="https://discord.gg/aba6rxp5ye"
+target="_blank"
+class="discord-btn">
 JOIN DISCORD
 </a>
 
 </div>
 
 </section>
+
+<script type="module" src="firebase.js"></script>
+
+<script>
+
+const profileBtn =
+document.querySelector(".profile-btn");
+
+const profileDropdown =
+document.querySelector(".profile-dropdown");
+
+profileBtn.addEventListener("click", ()=>{
+
+profileDropdown.classList.toggle("show");
+
+});
+
+document.addEventListener("click", (e)=>{
+
+if(
+!profileBtn.contains(e.target)
+&&
+!profileDropdown.contains(e.target)
+){
+
+profileDropdown.classList.remove("show");
+
+}
+
+});
+
+</script>
+
+<!-- FOOTER START -->
+
+<footer class="footer">
+
+<div class="footer-grid">
+
+<!-- LOGO -->
+
+<div class="footer-box">
+
+<div class="footer-logo">
+
+<img src="logo.png">
+
+<h2>SteveHost</h2>
+
+</div>
+
+<p>
+SteveHost provides premium Minecraft hosting
+with best performance and support.
+</p>
+
+</div>
+
+<!-- SERVICES -->
+
+<div class="footer-box">
+
+<h3>Services</h3>
+
+<a href="#">Minecraft Hosting</a>
+
+<a href="#">VPS Hosting</a>
+
+<a href="#">Dedicated Servers</a>
+
+</div>
+
+<!-- COMPANY -->
+
+<div class="footer-box">
+
+<h3>Company</h3>
+
+<a href="#">About Us</a>
+
+<a href="contact.html">
+Contact
+</a>
+
+<a href="policy.html">
+Privacy Policy
+</a>
+
+<a href="tos.html">
+Terms Of Service
+</a>
+
+</div>
+
+<!-- COMMUNITY -->
+
+<div class="footer-box">
+
+<h3>Community</h3>
+
+<div class="socials">
+
+<a href="#">
+<i class="fa-brands fa-discord"></i>
+</a>
+
+<a href="#">
+<i class="fa-brands fa-x-twitter"></i>
+</a>
+
+<a href="#">
+<i class="fa-brands fa-github"></i>
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>
+© 2026 SteveHost Hosting.
+All rights reserved.
+</p>
+
+</div>
+
+</footer>
+
+<!-- FOOTER END -->
 
 </body>
 </html>
